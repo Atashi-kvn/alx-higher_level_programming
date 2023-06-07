@@ -1,10 +1,3 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10000, 10000)
-lstd = abs(number) % 10
-if number > 5:
-    print(f'Last digit of {number} is {lstd} and is greater than 5')
-elif number == 0:
-    print(f'Last digit of {number} is {lstd} and is 0')
-else:
-    print(f'Last digit of {number} is -{lstd} and is less than 6 and not 0')
+for i in range(97, 123):
+    print("{:c}".format(i), end='')
