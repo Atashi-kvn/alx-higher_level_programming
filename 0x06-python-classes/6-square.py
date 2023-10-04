@@ -3,13 +3,13 @@
 
 class Square:
     """
-    class square that has attributes:
+    The class square has the following attribute:
         size
     some attributes are protected from input.
     """
     def __init__(self, size=0, position=(0, 0)):
         """
-        initialization function for our square clasee
+        initialization of the function for our square class
         """
         if self.__validate_size(size):
             self.__size = size
@@ -19,14 +19,14 @@ class Square:
     @property
     def size(self):
         """
-        getter for size attribute
+        gets the size attribute
         """
         return self.__size
 
     @size.setter
     def size(self, value):
         """
-        setter for size attribute
+        sets the size attribute
         """
         if self.__validate_size(value):
             self.__size = value
@@ -34,60 +34,60 @@ class Square:
     @property
     def position(self):
         """
-        getter for position attribute
+        gets the position attribute
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         """
-        setter for position attribute
+        sets the position attribute
         """
         if self.__validate_pos(value):
             self.__position = value
 
     def area(self):
         """
-        calculates the area of the square
+        For calculating the area of the square
         """
         return self.__size ** 2
 
     def my_print(self):
         """
-        prints the square using '#' characters
+        Will print the square using '#' character
         also takes into account position (x, y) offsets
         """
-        i = 0
+        a = 0
         if self.__size == 0:
             print()
             return
-        for i in range(0, self.__position[1]):
+        for a in range(0, self.__position[1]):
             print()
-        i = 0
-        for i in range(0, self.__size):
-            j = 0
+        a = 0
+        for a in range(0, self.__size):
+            b = 0
             x_pad = 0
             for x_pad in range(0, self.__position[0]):
                 print(" ", end='')
-            for j in range(0, self.__size):
+            for b in range(0, self.__size):
                 print("#", end='')
             print()
 
     def __validate_size(self, size):
         """
-        validates the size, checking for errors
+        will validate the size and checking for errors
         """
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("size must be greater 0")
         else:
             return True
         return False
 
     def __validate_pos(self, position):
         """
-        validates the position, checking for type errors
+        will validate the position and checking for type errors
         """
         if not isinstance(position, type((0, 0))):
             raise TypeError("position must be a tuple of 2 positive integers")

@@ -7,10 +7,10 @@ print(my_square.__dict__)
 
 try:
     print(my_square.size)
-except Exception as e:
-    print(e)
+except Exception as a:
+    print(a)
 
 try:
     print(my_square.__size)
-except Exception as e:
-    print(e)
+except Exception as a:
+    print(a)

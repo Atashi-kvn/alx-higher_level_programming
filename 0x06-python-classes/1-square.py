@@ -3,7 +3,7 @@
 
 class Square:
     """
-    class square that has attributes:
+    class square that has an attribute:
         size
     """
     def __init__(self, size):

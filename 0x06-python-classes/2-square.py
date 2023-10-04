@@ -3,14 +3,14 @@
 
 class Square:
     """
-    class square that has attributes:
+    class square that has an attribute:
         size
-    some attributes are protected from input.
+    And its protected from input.
     """
     def __init__(self, size=0):
         """
-        the initialization function for the square class
-        checks for input errors for size
+        the initialization of the function of square class
+        and checks for input errors for size
         """
         if type(size) != int:
             raise TypeError("size must be an integer")
