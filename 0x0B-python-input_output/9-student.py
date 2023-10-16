@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-    '''Defines a class Student.'''
+"""Defines a class Student."""
+
+
 class student:
-        """Reps the student."""
+    """Reps the student."""
     def __init__(self, first_name, last_name, age):
         '''Initialize a new student
         args:

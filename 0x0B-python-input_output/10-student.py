@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 '''Defines a class student'''
+
+
 class student:
     def __init__(self, first_name, last_name, age):
         '''Initialize a new student
@@ -17,12 +19,12 @@ class student:
     def to_json(self, attrs=None):
 
         '''Getting a dictionary rep of the student
-
-        if attrs is a list of string, represents only attributes included in the list
+        if attrs is a list of string,
+        represents only attributes included in the list
         Args:
             attrs (list): (optional) The attribute to represent
             '''
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return{_: getattr(self, _) for _ in attrs if hasattr(self, _)}
+        if (type(attrs) is list and
+                all(type(ele) is str for ele in attrs)):
+            return {_: getattr(self, _) for _ in attrs if hasattr(self, _)}
         return self.__dict__
